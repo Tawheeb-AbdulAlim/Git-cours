@@ -1,65 +1,103 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة تعليمية</title>
+    <title>منصة التعليم التفاعلي</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>منصتي التعليمية</h1>
-        <nav>
-            <ul>
-                <li><a href="#courses">الدورات</a></li>
-                <li><a href="#login">تسجيل الدخول</a></li>
-                <li><a href="#signup">إنشاء حساب</a></li>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">منصتي التعليمية</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#courses" class="nav-link">الدورات</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">عن المنصة</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">تسجيل الدخول</a>
+                </li>
             </ul>
-        </nav>
-    </header>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- قسم الهيرو -->
     <section class="hero">
-        <h2>تعلم من أي مكان وفي أي وقت</h2>
-        <p>انضم الآن إلى منصتنا التعليمية واحصل على أفضل الدورات في مختلف المجالات!</p>
+        <div class="hero-content">
+            <h1>مرحباً بك في منصة التعليم التفاعلي</h1>
+            <p>احصل على أفضل الدورات التعليمية من أفضل المدربين حول العالم</p>
+            <button class="cta-button" onclick="scrollToCourses()">استكشف الدورات</button>
+        </div>
     </section>
-    <section id="courses">
-        <h2>الدورات المتاحة</h2>
-        <div class="courses-list">
-            <div class="course-card">
-                <h3>برمجة المواقع</h3>
-                <p>تعلم أساسيات تطوير المواقع باستخدام HTML, CSS, JS.</p>
-            </div>
-            <div class="course-card">
-                <h3>الذكاء الاصطناعي</h3>
-                <p>مقدمة في الذكاء الاصطناعي وتعلم الآلة.</p>
-            </div>
-            <div class="course-card">
-                <h3>إدارة الأعمال</h3>
-                <p>أساسيات إدارة الأعمال والريادة.</p>
+
+    <!-- قسم الدورات -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2>دوراتنا التعليمية</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image">📊</div>
+                    <h3>تحليل البيانات</h3>
+                    <p>تعلم تحليل البيانات باستخدام أحدث الأدوات والتقنيات</p>
+                    <button class="enroll-btn">التسجيل</button>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">💻</div>
+                    <h3>تطوير الويب</h3>
+                    <p>احترف تطوير مواقع الويب باستخدام HTML, CSS, JavaScript</p>
+                    <button class="enroll-btn">التسجيل</button>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">📱</div>
+                    <h3>برمجة التطبيقات</h3>
+                    <p>أنشئ تطبيقات الجوال لنظامي Android و iOS</p>
+                    <button class="enroll-btn">التسجيل</button>
+                </div>
             </div>
         </div>
     </section>
-    <section id="login">
-        <h2>تسجيل الدخول</h2>
-        <form id="loginForm">
-            <input type="text" placeholder="اسم المستخدم" required>
-            <input type="password" placeholder="كلمة المرور" required>
-            <button type="submit">دخول</button>
-        </form>
-        <div id="loginMessage"></div>
+
+    <!-- قسم الإحصائيات -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>+5000</h3>
+                    <p>طالب مسجل</p>
+                </div>
+                <div class="stat-item">
+                    <h3>+100</h3>
+                    <p>دورة تعليمية</p>
+                </div>
+                <div class="stat-item">
+                    <h3>+50</h3>
+                    <p>مدرب محترف</p>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="signup">
-        <h2>إنشاء حساب جديد</h2>
-        <form id="signupForm">
-            <input type="text" placeholder="اسم المستخدم" required>
-            <input type="email" placeholder="البريد الإلكتروني" required>
-            <input type="password" placeholder="كلمة المرور" required>
-            <button type="submit">تسجيل</button>
-        </form>
-        <div id="signupMessage"></div>
-    </section>
-    <footer>
-        <p>جميع الحقوق محفوظة &copy; 2025 منصتي التعليمية</p>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 منصة التعليم التفاعلي. جميع الحقوق محفوظة.</p>
+        </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
