@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة تعليمية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>منصتي التعليمية</h1>
+        <nav>
+            <ul>
+                <li><a href="#courses">الدورات</a></li>
+                <li><a href="#login">تسجيل الدخول</a></li>
+                <li><a href="#signup">إنشاء حساب</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2>تعلم من أي مكان وفي أي وقت</h2>
+        <p>انضم الآن إلى منصتنا التعليمية واحصل على أفضل الدورات في مختلف المجالات!</p>
+    </section>
+    <section id="courses">
+        <h2>الدورات المتاحة</h2>
+        <div class="courses-list">
+            <div class="course-card">
+                <h3>برمجة المواقع</h3>
+                <p>تعلم أساسيات تطوير المواقع باستخدام HTML, CSS, JS.</p>
+            </div>
+            <div class="course-card">
+                <h3>الذكاء الاصطناعي</h3>
+                <p>مقدمة في الذكاء الاصطناعي وتعلم الآلة.</p>
+            </div>
+            <div class="course-card">
+                <h3>إدارة الأعمال</h3>
+                <p>أساسيات إدارة الأعمال والريادة.</p>
+            </div>
+        </div>
+    </section>
+    <section id="login">
+        <h2>تسجيل الدخول</h2>
+        <form id="loginForm">
+            <input type="text" placeholder="اسم المستخدم" required>
+            <input type="password" placeholder="كلمة المرور" required>
+            <button type="submit">دخول</button>
+        </form>
+        <div id="loginMessage"></div>
+    </section>
+    <section id="signup">
+        <h2>إنشاء حساب جديد</h2>
+        <form id="signupForm">
+            <input type="text" placeholder="اسم المستخدم" required>
+            <input type="email" placeholder="البريد الإلكتروني" required>
+            <input type="password" placeholder="كلمة المرور" required>
+            <button type="submit">تسجيل</button>
+        </form>
+        <div id="signupMessage"></div>
+    </section>
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025 منصتي التعليمية</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
